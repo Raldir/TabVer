@@ -51,4 +51,4 @@ With arguments being the processed data, the dataset, the environment, the model
 
 ## Contact
 
-If you are facing any issues running the code or have suggestions for improvements, please either open a Gituhub or sent me an e-mail. 
+If you are facing any issues running the code or have suggestions for improvements, please either open a Github issue or send me an e-mail. 
