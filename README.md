@@ -40,7 +40,7 @@ Download the models by running the following script, which should create a folde
 ./bin/download_models.sh
 ```
 
-## Run FEVEROUS
+## Run FEVEROUS
 
 
 With arguments being the processed data, the dataset, the environment, the model, the sample size, and the seed, run the following command to reproduce the main results from the paper on FEVEROUS:
