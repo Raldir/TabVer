@@ -1,0 +1,17 @@
+{
+    "num_train_epochs": 100,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "warmup_steps": 0,
+    "weight_decay": 0.01,
+    "learning_rate": 0.00001,
+    "save_steps": 500,
+    "logging_steps": 100,
+    "model_name": "microsoft/tapex-large-finetuned-tabfact",
+    "model_path": "models/tapex-large-finetuned-tabfact",
+    "exp_name": "tapex-large-finetuned-tabfact",
+    "map_verdict_to_index": {"SUPPORTS": 1, "REFUTES": 0, "NOT ENOUGH INFO": 2},
+    "nei_sampling_ratio": 1,
+    "num_labels": 2
+}

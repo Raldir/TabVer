@@ -1,0 +1,36 @@
+{
+    "system_description": "Always ensure that each generated question is a single sentence. Ensure that the answer to each question starts on a new line, seperated by a single new line character.",
+    "task_description": "Read the tables below taken from Wikipedia to answer a question regarding the table. Use only the following functions for arithmetic reasoning and state them explictly when used: {FUNCTIONS}. If none of these functions is needed for reasoning say N/A.",
+    "demo_sep": "\n\n\n",
+    "context_format": "{INST}\nQuestion: {}\nTable: {}\nAnswer: {}",
+    "answer_format": "Extracted evidence from table: {EVIDENCE} Computation: {COMPUTATION} Result: {ARITHEXP}",
+    "response_template": "\nAnswer:",
+    "negative_answer": "N/A",
+    "negative_evidence": "Not sufficient information found in the table.",
+    "examples": [
+        {
+            "table_title": "2002 u.s. open (golf)",
+            "table": "place | player | country | score | to par\n1 | tiger woods | united states | 67 + 68 + 70 = 205 | - 5\n2 | sergio garcía | spain | 68 + 74 + 67 = 209 | - 1\nt3 | jeff maggert | united states | 69 + 73 + 68 = 210 | e\nt3 | phil mickelson | united states | 70 + 73 + 67 = 210 | e\nt5 | robert allenby | australia | 74 + 70 + 67 = 211 | + 1\nt5 | pádraig harrington | ireland | 70 + 68 + 73 = 211 | + 1\nt5 | billy mayfair | united states | 69 + 74 + 68 = 211 | + 1\nt8 | nick faldo | england | 70 + 76 + 66 = 212 | + 2\nt8 | justin leonard | united states | 73 + 71 + 68 = 212 | + 2\nt10 | tom byrum | united states | 72 + 72 + 70 = 214 | + 4\nt10 | davis love iii | united states | 71 + 71 + 72 = 214 | + 4\nt10 | scott mccarron | united states | 72 + 72 + 70 = 214 | + 4\n",
+            "question": "How does the score of Tiger Woods compare to Sergio Garcia's?",
+            "explanation": "Tiger Woods scored 205 and Sergio Garcia scores 209.",
+            "computation": "Comparing (substracting) 205 - 209 = -4.",
+            "arith_exp": "COMP -4"
+        },
+        {
+            "table_title": "2002 u.s. open (golf)",
+            "table":"Club performance|League|Cup|Continental|Total\nSeason|Club|League|Apps|Goals|Apps|Goals|Apps|Goals|Apps|Goals\nJapan|League|Emperor's Cup|Asia|Total\n2002|Ventforet Kofu|J2 League|43|0|3|0|-|46|0\n2003|38|0|3|0|-|41|0\n2004|34|0|2|0|-|36|0\n2005|25|0|2|0|-|27|0\n2006|Tokyo Verdy|J2 League|14|2|0|0|1|0|15|2\n2007|Tokushima Vortis|J2 League|44|1|2|0|-|46|1\nCareer total|198|3|12|0|1|0|211|0\n",
+            "question": "How many appearances did Yukihiro Aoba have for the Ventforet Kofu from 2002 to 2005 in the J2 League?",
+            "explanation": "yukihiro aoba appeared in four seasons for the ventforet kofu, appearing 43, 38, 34, and 25 times in them, respectively.",
+            "computation": "Adding 43 + 38 + 34 + 25 = 140.",
+            "arith_exp": "SUM 140"
+        },
+        {
+            "table_title": "Ryōsuke Hashiguchi",
+            "table": " Year | English title | Original title | Notes\n1981 | Fa | Fa | director; short film, 4 minutes\n1985 | Whistling...1985 | 1985 Hyururu...1985 | director; writer; actor; producer\n1989 | A Secret Evening | Yūbe no himitsu | director; writer; actor 1994 Tokyo International Lesbian & Gay Film Festival title: Secret in the Evening\n1993 | A Touch of Fever | Hatachi no binetsu | director; writer\n1995 | Like Grains of Sand | Nagisa no Shindobaddo | director; writer; actor\n2001 | Hush! | Sono tori | director; writer\n2008 | All Around Us | Gururi no koto | director; writer\n2013 | Zentai | Zentai | director; writer\n2013 | Sunrise Sunset | Sanraizu sansetto | director; writer\n 2015 | Three Stories of Love | Koibito-tachi | director; writer\n",
+            "question": "How many movies did Ryōsuke Hashiguchi direct from 1981 to 2015?",
+            "explanation": "Ryōsuke Hashiguchi directyed 'Fa (1981)', 'Whistling...1985 (1985)', 'A Secret Evening (1989)', 'A Touch of Fever (1993)', 'Like Grains of Sand (1995)', 'Hush! (2001)', 'All Around Us (2008)', 'Zentai (2013)', 'Sunrise Sunset (2013)', and 'Three Stories of Love (2015)'.",
+            "computation": "Counting 'Fa (1981)', 'Whistling...1985 (1985)', 'A Secret Evening (1989)', 'A Touch of Fever (1993)', 'Like Grains of Sand (1995)', 'Hush! (2001)', 'All Around Us (2008)', 'Zentai (2013)', 'Sunrise Sunset (2013)', and 'Three Stories of Love (2015)' results in 10.",
+            "arith_exp": "COUNT 10"
+        }
+    ]
+}

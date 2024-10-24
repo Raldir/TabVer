@@ -1,0 +1,33 @@
+{
+    "system_description": "Be as factually accurate as you can be and base your verdict solely on the provided evidence. Make sure to answer with only either Yes, No, or Neutral.",
+    "task_description": "Predict the veracity label of following claim given the provided evidence table.",
+    "context_format": "{INST}\n\nClaim: {}\nEvidence: {}\nLabel: {}",
+    "demo_sep": "\n\n\n",
+    "response_template": "\nLabel:",
+    "examples": [
+        {
+            "id": 48550,
+            "claim": "Tholing, located in Zanda county in China, sits at an elevation of 3,660 metres and has a few poplar trees in town.",
+            "table_title": "Tholing",
+            "table":"Tholing མཐོ་ལྡིང་ 托林镇 Zanda|Country|China\nRegion|Tibet Autonomous Region\nPrefecture|Ngari\nCounty|Zanda\nArea\nTotal|0.3 km (0.1 sq mi)\nElevation|3,723 m (12,215 ft)\nPopulation\nTotal|600\nDensity|2,000/km (5,000/sq mi)\nMajor Nationalities|Tibetan\nRegional dialect|Tibetan language\nTime zone|UTC+8 ( China Standard )\nPostal code|859600\nArea code(s)|0897",
+            "label": "No",
+            "explanation": "According to the table, Tholing sits at an elevation of 3,723 metres. This contradicts the claim with 3,660 metres. Therefore the claim is contradicted by the evidence."
+        },
+        {
+            "id": 80385,
+            "claim": "Ryan Mathews of the 2003 Kansas State Wildcats football team posted a higher rushing average than his teammate Ell Roberson.",
+            "table_title": "2003 Kansas State Wildcats football team",
+            "table": "Name|GP|Att|Gain|Loss|Net|Avg|TD|Long|Avg/G\nDarren Sproles|15|306|2,067|81|1,986|6.5|16|73|132.4\nEll Roberson|13|227|1135|160|975|4.3|15|33|75.0\nTotal|15|688|3,817|388|3,429|5.0|42|73|228.6\nOpponents|15|549|2,113|486|1,627|3.0|6|45|108.5",
+            "label": "Neutral",
+            "explanation": "There is no mention of Ryan Methews in the table. Therefore, the table is unrelated to the claim."
+        },
+        {
+            "id": 42356,
+            "claim": "The 1948 Michigan State Normal Hurons football team suffered a defeat from the Northern Illinois football team on October 29, 1948.",
+            "table_title": "1948 Michigan State Normal Hurons football team",
+            "table": "Date|Opponent|Site|Result\nSeptember 24|at Hope|Holland, MI|L 0–14\nOctober 2|at Illinois State|Normal, IL|L 7–40\nOctober 9|Northern Michigan|W 6–0\nOctober 16|at Ball State|Muncie, IN|L 14–23\nOctober 23|at Eastern Kentucky|Richmond, KY|L 0–20\nOctober 29|Northern Illinois|L 7–10\nNovember 6|Central Michigan|W 6–0\nNovember 12|Valparaiso|W 26–7",
+            "label": "Yes",
+            "explanation": "According to the table, the 1948 Michigian State Normal Hurons football team achieved a result of L 7-10 against the Opponent Northern Illinois, indicating that they have lost 7 to 10 against them. The table further dates their match on October 29. Therefore all information in the claim is supported by the evidence table."
+        }
+    ]
+}

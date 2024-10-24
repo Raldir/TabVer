@@ -1,0 +1,31 @@
+{
+    "system_description": "Always ensure that each generated subclaim is a single sentence without conjunctive clauses. Ensure to enumerate each subclaim and that each subclaim starts on a new line.",
+    "task_description": "Break a claim down into its subclaims. Ensure that each subclaim can stand by itself and does not require the original claim to be understood.",
+    "demo_sep": "\n\n\n",
+    "context_format": "{INST}\n\nClaim: {}\nSubclaims: {}",
+    "response_template": "\nSubclaims:",
+    "examples": [
+        {
+            "id": 93798,
+            "claim": "Lee Ashcroft played for various clubs since the 1990-91 season including the Preston North End where he was able to record less than a hundred appearances and 14 goals for the team.",
+            "subclaims": 
+            [
+                "Lee Ashcroft played for various clubs since the 1990-91 season.",
+                "Lee Ashcroft played for Preston North End.",
+                "Lee Ashcroft recorded less than a hundred appearances for Preston North End.",
+                "Lee Ashcroft scored 14 goals for Preston North End."
+            ]
+        },
+        {
+            "id": 52333,
+            "claim": "Pavitra Hrudayalu has a soundtrack which includes songs such as 'Sarananna Vaarini' sang by Ghantasala, an Indian playback singer and occasional music-composer from Andhra Pradesh.",
+            "subclaims": 
+            [
+                "Pavitra Hrudayalu has a soundtrack.",
+                "The soundtrack of Pavitra Hrudayalu includes songs like 'Sarananna Vaarini'",
+                "'Sarananna Vaarini' is sung by Ghantasala.",
+                "Ghantasala is an Indian playback singer and occasional music-composer from Andhra Pradesh."
+            ]
+        }
+    ]
+}

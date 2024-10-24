@@ -1,0 +1,45 @@
+{
+    "system_description": "Always ensure that each generated question is a single sentence. Ensure to enumrate each question and corresponding answer with the same number.",
+    "task_description": "For a given claim, generate questions with answers that are found in the claim itself. Ensure that the answer is located exactly as a substring in the claim itself. Generate the least number of questions as needed to verify the key information of the claim.",
+    "task_description_arithmetic":"For a given claim, generate questions with answers that are found in the claim itself. Only generate questions that require arithmetic reasoning, such as counting, addition, or averaging. Ensure that the answer is located exactly as a substring in the claim itself. Do only generate a single question per claim.",
+    "demo_sep": "\n\n\n",
+    "context_format": "{INST}\n\nClaim: {}\nQuestions: {}",
+    "response_template": "\nQuestions:",
+    "examples": [
+        {
+            "claim": "Lee Ashcroft recorded less than a hundred appearances for Preston North End.",
+            "question": "How many appearances did Lee Ashcroft record for Preston North End?",
+            "answer": "less than a hundred"
+        },
+        {
+            "claim": "1976 United States Senate election in North Dakota (held November 2, 1976) had two candidates and the winner was Quentin Burdick.",
+            "question": "How many candidates did the 1976 United States Senate election in North Dakota have?",
+            "answer": "two"
+        },
+        {
+            "claim": "John Laurie had partial television credits.",
+            "question": "No relevant question found.",
+            "answer": "N/A"
+        },
+        {
+            "claim": "Oyedaea is part of the family Asteraceae.",
+            "question": "No relevant question found.",
+            "answer": "N/A"
+        },
+        {
+            "claim": "There are nine schools that join the Frisco League.",
+            "question": "How many schools are to join the Frisco League?",
+            "answer": "nine"
+        },
+        {
+            "claim": "The Sap production discography produced a total of eight songs in seven different albums from 2011 to 2015.",
+            "question": "How many songs did the Sap production produce from 2011 to 2015?",
+            "answer": "eight"
+        },
+        {
+            "claim": "Martin Marder was active in the army from 1911 to 1920.",
+            "question": "For what duration was Martin Marder active in the army?",
+            "answer": "1911 to 1920"
+        }
+    ]
+}

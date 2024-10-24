@@ -1,0 +1,2 @@
+
+python3 -m src.run -c configs/alignment/$1.json+configs/dataset/$2.json+configs/environment/$3.json+configs/model/$4.json+configs/samples/$5.json -k exp_name=$2/environment_$3_model_$4_alignment_$1_samples_$5/$6 seed=$6

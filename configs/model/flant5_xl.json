@@ -1,0 +1,9 @@
+{
+    "origin_model" : "google/flan-t5-xl",
+    "batch_size": 4,
+    "grad_accum_factor": 8,
+    "eval_batch_size" : 32,
+    "num_steps": 2000,
+    "val_check_interval": 250,
+    "lr": 1e-5
+}

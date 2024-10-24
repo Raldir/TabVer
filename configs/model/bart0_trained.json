@@ -1,0 +1,10 @@
+{
+    "origin_model" : "yuchenlin/BART0pp",
+    "batch_size": 8,
+    "grad_accum_factor": 4,
+    "eval_batch_size" : 32,
+    "num_steps": 2000,
+    "val_check_interval": 900,
+    "lr": 1e-5,
+    "load_weight": "models/TabVer_BART0/42/finish.pt"
+}

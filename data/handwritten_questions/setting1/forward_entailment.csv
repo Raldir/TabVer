@@ -1,0 +1,2 @@
+Given the premise "{{evidence}}", does the hypothesis "{{span}}" always hold? Yes or No?
+Is "{{span}}" entailed by "{{evidence}}? Yes or No?

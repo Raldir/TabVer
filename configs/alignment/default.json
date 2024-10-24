@@ -1,0 +1,12 @@
+{
+    "use_retrieved_evidence" : true,
+    "num_retrieved_evidence":  5,
+    "few_shot": true,
+    "alignment_model": "bert_finetuned_paper",
+    "use_tab_qa": "all_table_llm_replace",
+    "qg_model": "models/Mistral-7B-OpenOrca-LoRA-QG",
+    "qa_model": "models/Mistral-7B-OpenOrca-LoRA-QA",
+    "decomposition_model": "models/Mistral-7B-OpenOrca-LoRA-Decomp",
+    "claim_decomposition": "generation",
+    "permissable_operators": "all"
+}
